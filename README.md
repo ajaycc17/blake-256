@@ -1,24 +1,18 @@
+# BLAKE-256 (or BLAKE32) Hash function: BS and MS Project- IISERB(2022-23)
 
-# Implementation of BLAKE Hash Function in C
-### ECS412(BS Project) - April 2022
-
-This project studies the working principles and methods of the [MD5](https://github.com/ajaycc17/md5-hash-function) and BLAKE hash functions. MD5 hash
-function is not cryptographically secure now, it has already been broken and is used only for local integrity
-checks and other simple tasks, but it is a great example to understand the concept of hash functions; it
-introduces message compression using a naive method and then with the help of some non-linear functions
-on the message, the hash for the message is generated. The BLAKE hash function is similar to the MD5 hash
-function for a few initial steps. MD5 produces a 128-bit hash value with the compression of the message by
-adding some extra bits and applying some non-linear functions. But in BLAKE, a core function uses 16
-different states to process the content of the message and generates a 256-bit hash value. The working
-method of both the hash functions is explained, and the hash functions are implemented in the C
-programming language for simple string values.
-
-
+Under the BS project, the working principles and methods the BLAKE-256 hash functions was studied and implemented to produce hash for a given string or any binary file. Later, under the MS project, properties of BLAKE-256 were analysed and preimage attacks were mounted on the round-reduced(i.e. 1.5 and 2 rounds) versions. This repository contains both the works combined and uses C/C++ programming language for implementations of the functions and attacks.
 ## Author
 
-- [@ajaycc17](https://www.github.com/ajaycc17)(Ajay Choudhury)
+- [@ajaycc17](https://www.github.com/ajaycc17)
+
+## Under guidance of
+
+- Dr Shashank Singh([IISER Bhopal](https://sites.google.com/view/shashank))
 
 
+## Acknowledgements
 
-## Under Guidance of:
-Dr. Shashank Singh [(IISER Bhopal)](https://sites.google.com/view/shashank).
+ - Jean-Philippe Aumasson, Luca Henzen, Willi Meier, Raphael C.-W. Phan: [Sha-3 proposal blake. Submission to NIST (2008)](https://www.aumasson.jp/blake/blake.pdf)
+ - Ji, L., Liangyu, X.: Attacks on round-reduced BLAKE. [Cryptology ePrint Archive, Report 2009/238 (2009)](https://eprint.iacr.org/2009/238.pdf)
+ - Jean-Philippe Aumasson, Jian Guo, Simon Knellwolf, Krystian Matusiewicz, and Willi Meier: [Differential and invertibility properties of BLAKE (full version). [Cryptology ePrint Archive, Report 2010/043 (2010)](https://eprint.iacr.org/2010/043.pdf)
+
